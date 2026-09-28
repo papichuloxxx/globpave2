@@ -41,6 +41,8 @@ This runs ESLint followed by a production Next.js build. GitHub Actions runs the
 
 ## Deployment
 
-The site is a standard Next.js application and requires no environment variables for the current feature set. Deploy with a Node-compatible Next.js host, then verify the production domain in Google Search Console and submit `/sitemap.xml`.
+Pushes to `main` publish a static export to [GitHub Pages](https://papichuloxxx.github.io/globpave2/). The deployment workflow sets the `/globpave2` base path used by GitHub project pages.
+
+After connecting the final domain, verify it in Google Search Console and submit `/sitemap.xml`.
 
 The canonical production URL is `https://www.globpaveconstruction.co.zw`.

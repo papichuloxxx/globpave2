@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
@@ -7,6 +8,7 @@ import Footer from "./components/Footer";
 import MobileContactBar from "./components/MobileContactBar";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
 import SchemaMarkup from "./components/SchemaMarkup";
+import { assetPath } from "./paths";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -81,7 +83,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       data-scroll-behavior="smooth"
       className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body
+        className="min-h-full flex flex-col"
+        style={{ "--cloud-image": `url("${assetPath("/images/header-clouds.webp")}")` } as CSSProperties}
+      >
         <SchemaMarkup />
         <Header />
         <main id="main-content" className="flex-1">{children}</main>

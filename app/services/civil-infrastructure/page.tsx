@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { assetPath } from '../../paths';
 
 export default function CivilInfrastructurePage() {
   return (
@@ -142,7 +143,7 @@ export default function CivilInfrastructurePage() {
               <div key={project} className="bg-white rounded-lg overflow-hidden border border-gray-200">
                 <div className="relative h-48">
                   <Image
-                    src={`/images/projects/project-${project}.jpeg`}
+                    src={assetPath(`/images/projects/project-${project}.jpeg`)}
                     alt={`Civil project ${project}`}
                     fill
                     className="object-cover"

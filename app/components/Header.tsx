@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, List, X } from '@phosphor-icons/react';
+import { assetPath } from '../paths';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -24,7 +25,7 @@ export default function Header() {
       <div className="header-inner">
         <Link href="/" className="brand" aria-label="Globpave Construction home" onClick={() => setOpenPath(null)}>
           <span className="brand-image">
-            <Image src="/images/logos/logo-transparent.png" alt="Globpave Construction — pavers and paving specialists" fill sizes="(max-width: 900px) 118px, 142px" preload />
+            <Image src={assetPath('/images/logos/logo-transparent.png')} alt="Globpave Construction — pavers and paving specialists" fill sizes="(max-width: 900px) 118px, 142px" preload />
           </span>
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">

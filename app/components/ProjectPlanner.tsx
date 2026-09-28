@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowRight, HouseLine, Stack, Wrench, Check, MapPin } from '@phosphor-icons/react';
+import { assetPath } from '../paths';
 
 const options = [
   { value: 'Build or renovate', Icon: HouseLine },
@@ -13,7 +14,7 @@ const options = [
 export default function ProjectPlanner() {
   const router = useRouter();
   const [selected, setSelected] = useState('');
-  return <form className="project-planner" action="/quote" onSubmit={event => {
+  return <form className="project-planner" action={assetPath('/quote')} onSubmit={event => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const location = String(data.get('location') || '').trim();

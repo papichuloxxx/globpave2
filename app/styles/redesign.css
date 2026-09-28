@@ -1,6 +1,6 @@
 /* Architectural homepage and project enquiry flow */
 :root { --brand-blue: #006cd3; --paper: #f7f7f4; --ink: #121417; --muted: #535d6c; }
-.site-header { position: sticky; top: 0; z-index: 50; background-color: #eaf5ff; background-image: linear-gradient(rgba(255,255,255,.54), rgba(255,255,255,.54)), url('/images/header-clouds.webp'); background-position: center 44%; background-size: cover; border-bottom: 1px solid rgba(0,108,211,.16); }
+.site-header { position: sticky; top: 0; z-index: 50; background-color: #eaf5ff; background-image: linear-gradient(rgba(255,255,255,.54), rgba(255,255,255,.54)), var(--cloud-image); background-position: center 44%; background-size: cover; border-bottom: 1px solid rgba(0,108,211,.16); }
 .header-inner { max-width: 1600px; margin: auto; min-height: 94px; padding: 8px 4.5%; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .brand { flex-shrink: 0; }
 .brand-image { position: relative; display: block; width: 142px; aspect-ratio: 1080 / 608; }
@@ -26,7 +26,7 @@ a.button-white:hover, button.button-white:hover { background: #eaf3ff; color: #0
 .home-redesign p { color: var(--muted); }
 .eyebrow { font-size: 10px; font-weight: 650; letter-spacing: .27em; line-height: 1.6; text-transform: uppercase; }
 .hero-split { display: grid; grid-template-columns: 43% 57%; max-width: 1800px; margin: auto; background: var(--paper); }
-.hero-copy { padding: 44px 36px 38px max(32px, calc((100vw - 1310px) / 2)); background-color: var(--paper); background-image: linear-gradient(rgba(247,247,244,.9), rgba(247,247,244,.9)), url('/images/header-clouds.webp'); background-position: center; background-size: cover; }
+.hero-copy { padding: 44px 36px 38px max(32px, calc((100vw - 1310px) / 2)); background-color: var(--paper); background-image: linear-gradient(rgba(247,247,244,.9), rgba(247,247,244,.9)), var(--cloud-image); background-position: center; background-size: cover; }
 .hero-copy h1 { font-size: clamp(46px, 5.35vw, 82px); line-height: .99; letter-spacing: -.06em; font-weight: 800; margin: 28px 0 22px; }
 .hero-description { font-size: 16px; max-width: 425px; line-height: 1.7; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0; }
@@ -234,7 +234,7 @@ a.text-link:hover { color: var(--brand-blue); }
   .review-actions { flex-direction: column; }
 }
 /* Shared editorial layout for the main navigation pages */
-.page-intro { background-color: #eef6fc; background-image: linear-gradient(rgba(255,255,255,.8), rgba(247,250,252,.86)), url('/images/header-clouds.webp'); background-position: center; background-size: cover; padding-top: 60px; padding-bottom: 55px; }
+.page-intro { background-color: #eef6fc; background-image: linear-gradient(rgba(255,255,255,.8), rgba(247,250,252,.86)), var(--cloud-image); background-position: center; background-size: cover; padding-top: 60px; padding-bottom: 55px; }
 .page-intro .eyebrow { color: #005bb4; margin-bottom: 22px; }
 .page-intro h1 { font-size: clamp(38px,4.8vw,68px); font-weight: 800; letter-spacing: -.05em; line-height: 1.08; max-width: 990px; }
 .page-intro-copy { max-width: 760px; font-size: 17px; color: var(--muted); margin-top: 25px; }
@@ -246,7 +246,7 @@ a.text-link:hover { color: var(--brand-blue); }
 .service-list p { max-width: 800px; color: var(--muted); font-size: 15px; line-height: 1.8; }
 .service-list .text-link { margin-top: 7px; }
 .service-tags { display: block; font-size: 11px; letter-spacing: .07em; margin-top: 20px; text-transform: uppercase; color: #526574; }
-.inner-cta { background-color: #eef6fc; background-image: linear-gradient(rgba(255,255,255,.82), rgba(247,250,252,.88)), url('/images/header-clouds.webp'); background-position: center; background-size: cover; }
+.inner-cta { background-color: #eef6fc; background-image: linear-gradient(rgba(255,255,255,.82), rgba(247,250,252,.88)), var(--cloud-image); background-position: center; background-size: cover; }
 .inner-cta h2 { font-size: clamp(28px,3vw,42px); letter-spacing: -.04em; font-weight: 800; }
 .inner-cta p { margin: 16px 0 24px; color: var(--muted); max-width: 700px; }
 .editorial-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }

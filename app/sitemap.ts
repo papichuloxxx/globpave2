@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { projects } from './project-data';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.globpaveconstruction.co.zw';
 

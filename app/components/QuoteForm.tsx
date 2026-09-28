@@ -1,11 +1,15 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { ArrowRight, ArrowLeft, Phone, Envelope, WhatsappLogo, ClipboardText } from '@phosphor-icons/react';
 
 const projectTypes = ['Build or renovate', 'Pave an outdoor space', 'Repair & maintain', 'Civil works & drainage', 'Roofing & interiors', 'Plumbing & water', 'Electrical & fencing', 'Other / not sure'];
 
-export default function QuoteForm({ initialType, initialLocation }: { initialType: string; initialLocation: string }) {
+export default function QuoteForm() {
+  const searchParams = useSearchParams();
+  const initialType = (searchParams.get('type') ?? '').slice(0, 100);
+  const initialLocation = (searchParams.get('location') ?? '').slice(0, 160);
   const [details, setDetails] = useState({
     name: '', phone: '', email: '', location: initialLocation,
     type: projectTypes.includes(initialType) ? initialType : '',

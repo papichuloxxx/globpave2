@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ArrowUpRight, CheckCircle, Phone } from '@phosphor-icons/react/ssr';
 import ProjectPlanner from './components/ProjectPlanner';
+import { assetPath } from './paths';
 
 const services = [
   { title: 'Civil & infrastructure', text: 'Prepare sites, construct and rehabilitate roads, and manage stormwater with practical drainage systems.', image: '/images/projects/project-14.jpeg', alt: 'Earthmoving equipment preparing a construction site beside a brick building', href: '/services/civil-infrastructure', tag: 'PREPARE THE GROUND' },
@@ -23,7 +24,7 @@ export default function Home() {
         <p className="hero-footnote">From foundations to a brighter tomorrow.</p>
       </div>
       <div className="hero-photograph">
-        <Image src="/images/projects/project-20.jpeg" alt="Completed patterned paving winding through a landscaped garden" fill sizes="(max-width: 760px) 100vw, 58vw" preload className="hero-image" />
+        <Image src={assetPath('/images/projects/project-20.jpeg')} alt="Completed patterned paving winding through a landscaped garden" fill sizes="(max-width: 760px) 100vw, 58vw" preload className="hero-image" />
         <div className="photo-caption"><span>CRAFTED TO LAST</span><strong>Paving with purpose.</strong><p>Residential & commercial spaces</p></div>
       </div>
     </section>
@@ -31,7 +32,7 @@ export default function Home() {
       <div className="section-heading"><div><p className="eyebrow">OUR SERVICES</p><h2 id="services-heading">Every stage.<br className="mobile-break" /> Thoughtfully built.</h2></div><Link href="/services" className="text-link">Explore all services <ArrowUpRight size={20} aria-hidden /></Link></div>
       <p className="section-intro">Prepare the ground. Shape the structure. Refine the finish. Find the right expertise for the next stage of your property.</p>
       <div className="service-grid">{services.map(service => <Link className="service-feature" key={service.title} href={service.href}>
-        <div className="service-image"><Image src={service.image} alt={service.alt} fill sizes="(max-width: 760px) 100vw, 33vw" /></div>
+        <div className="service-image"><Image src={assetPath(service.image)} alt={service.alt} fill sizes="(max-width: 760px) 100vw, 33vw" /></div>
         <p className="service-tag">{service.tag}</p><div className="service-title"><h3>{service.title}</h3><ArrowUpRight size={24} aria-hidden /></div><p>{service.text}</p>
       </Link>)}</div>
     </section>
@@ -43,7 +44,7 @@ export default function Home() {
       <ProjectPlanner />
     </section>
     <section className="work-section section-wrap" aria-labelledby="work-heading"><div className="section-heading"><div><p className="eyebrow">A CLOSER LOOK</p><h2 id="work-heading">The details make<br />the difference.</h2></div><Link className="text-link" href="/projects">View project gallery <ArrowUpRight size={20} aria-hidden /></Link></div>
-      <div className="work-grid"><figure><div className="work-image"><Image src="/images/projects/project-04.jpeg" alt="Completed paved parking bays alongside a commercial building" fill sizes="(max-width: 760px) 100vw, 60vw" /></div><figcaption><h3>Room for business to grow.</h3><span>Commercial paving</span></figcaption></figure><figure><div className="work-image"><Image src="/images/projects/project-03.jpeg" alt="Construction team carefully laying paving blocks by hand" fill sizes="(max-width: 760px) 100vw, 40vw" /></div><figcaption><h3>Care in every course.</h3><span>Our team at work</span></figcaption></figure></div>
+      <div className="work-grid"><figure><div className="work-image"><Image src={assetPath('/images/projects/project-04.jpeg')} alt="Completed paved parking bays alongside a commercial building" fill sizes="(max-width: 760px) 100vw, 60vw" /></div><figcaption><h3>Room for business to grow.</h3><span>Commercial paving</span></figcaption></figure><figure><div className="work-image"><Image src={assetPath('/images/projects/project-03.jpeg')} alt="Construction team carefully laying paving blocks by hand" fill sizes="(max-width: 760px) 100vw, 40vw" /></div><figcaption><h3>Care in every course.</h3><span>Our team at work</span></figcaption></figure></div>
     </section>
     <section className="home-about section-wrap"><div><p className="eyebrow">THE GLOBPAVE APPROACH</p><h2>The unseen work.<br />The visible difference.</h2></div><div><p className="about-lead">The finish gets noticed. The preparation makes it possible.</p><p>Levels, drainage, material choices and careful installation all shape how a space performs. Our approach connects those decisions, so the work beneath the surface supports the result above it.</p><ul>{['Thoughtful preparation', 'Careful workmanship', 'Clear communication'].map(value => <li key={value}><CheckCircle size={21} aria-hidden />{value}</li>)}</ul><Link href="/about" className="text-link">Get to know Globpave <ArrowRight size={20} aria-hidden /></Link></div></section>
     <section className="home-cta section-wrap"><div><p className="eyebrow">LET’S BUILD SOMETHING LASTING</p><h2>Make room for what comes next.</h2></div><Link href="#plan-project" className="button button-blue">Start your project <ArrowRight size={20} aria-hidden /></Link></section>
