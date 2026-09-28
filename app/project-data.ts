@@ -1,0 +1,10 @@
+export const projects = [
+  { id: 1, title: 'Commercial paving & drainage', category: 'Commercial', image: 'project-01.jpeg', description: 'A broad paved surface alongside industrial buildings, with a channel drain at the edge. Surface levels and water management are central considerations for spaces like these.' },
+  { id: 2, title: 'A foundation for the final surface', category: 'Groundworks', image: 'project-10.jpeg', description: 'Ground preparation across a commercial site. The work before paving establishes the levels and base that support the finished surface.' },
+  { id: 3, title: 'Paving, laid with care', category: 'Work in progress', image: 'project-03.jpeg', description: 'The team laying interlocking blocks beside a brick building. A closer view of alignment, edge work and hands-on installation.' },
+  { id: 4, title: 'Space to arrive and park', category: 'Commercial', image: 'project-04.jpeg', description: 'Paved parking bays outside a row of commercial buildings, with marked spaces and a clear pedestrian edge.' },
+  { id: 5, title: 'A path through the garden', category: 'Outdoor spaces', image: 'project-20.jpeg', description: 'A patterned paved driveway framed by established planting. The changing tones of the blocks add definition to the route through the garden.' },
+  { id: 6, title: 'Preparing the way', category: 'Groundworks', image: 'project-14.jpeg', description: 'Earthmoving equipment working beside a building. Access, ground conditions and the intended surface all inform this stage of a project.' },
+  { id: 7, title: 'Colour along the approach', category: 'Outdoor spaces', image: 'project-24.jpeg', description: 'A red paved approach with contrasting edges beside a lawn. A simple material palette gives the driveway a distinct character.' },
+  { id: 8, title: 'Progress on site', category: 'Work in progress', image: 'project-12.jpeg', description: 'A view of a residential site during ongoing work, showing the building, outdoor areas and the team on site.' },
+];

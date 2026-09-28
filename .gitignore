@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local source archives and design working files
+/WhatsApp Unknown *.zip
+/globpave.jpeg
+/globpavelogo.jpeg
+/asset-contact-sheet.jpg
+/design-qa.md
+/tasks/
