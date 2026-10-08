@@ -8,74 +8,74 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       changeFrequency: 'monthly' as const,
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/about/`,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services`,
+      url: `${baseUrl}/services/`,
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/civil-infrastructure`,
+      url: `${baseUrl}/services/civil-infrastructure/`,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/services/building-construction`,
+      url: `${baseUrl}/services/building-construction/`,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/services/paving-external-works`,
+      url: `${baseUrl}/services/paving-external-works/`,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/services/plumbing-water-solutions`,
+      url: `${baseUrl}/services/plumbing-water-solutions/`,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/services/roofing-interiors`,
+      url: `${baseUrl}/services/roofing-interiors/`,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/services/fencing-electrical-maintenance`,
+      url: `${baseUrl}/services/fencing-electrical-maintenance/`,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/projects`,
+      url: `${baseUrl}/projects/`,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/process`,
+      url: `${baseUrl}/process/`,
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/quote`,
+      url: `${baseUrl}/quote/`,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/contact/`,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
   ];
 
   const projectRoutes = projects.map(project => ({
-    url: `${baseUrl}/projects/${project.id}`,
+    url: `${baseUrl}/projects/${project.id}/`,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));
