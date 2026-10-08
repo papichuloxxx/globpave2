@@ -48,13 +48,13 @@ export const metadata: Metadata = {
     siteName: "Globpave Construction",
     locale: "en_ZW",
     type: "website",
-    images: [{ url: "/images/projects/project-20.jpeg", width: 1080, height: 474, alt: "Patterned paving completed by Globpave Construction" }],
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630, alt: "Globpave Construction: construction and paving across Zimbabwe" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Globpave Construction | Construction & Paving in Zimbabwe",
     description: site.description,
-    images: ["/images/projects/project-20.jpeg"],
+    images: ["/images/og-default.jpg"],
   },
   alternates: { canonical: "/" },
   robots: {

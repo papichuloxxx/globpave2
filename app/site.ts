@@ -13,3 +13,6 @@ export const site = {
 };
 
 export const primaryPhone = site.phones[0];
+
+const { street, suburb, city, country } = site.address;
+export const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(`${street}, ${suburb}, ${city}, ${country}`);

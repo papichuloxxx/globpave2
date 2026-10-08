@@ -78,7 +78,7 @@ a.text-link:hover { color: var(--brand-blue); }
 .process-steps h3 { font-size: 14px; margin: 13px 0 9px; font-weight: 700; }
 .process-steps p { font-size: 12px; line-height: 1.65; }
 .project-planner { background: var(--brand-blue); color: white; padding: 42px max(32px, calc((100vw - 1310px) / 2)) 34px 46px; }
-.project-planner .eyebrow { color: #dfecff; font-size: 9px; margin-bottom: 15px; }
+.project-planner .eyebrow { color: #fff; font-size: 10px; margin-bottom: 15px; }
 .project-planner h2 { color: white; font-size: clamp(34px,3.4vw,49px); line-height: 1.08; }
 .project-planner fieldset { border: 0; margin: 22px 0; padding: 0; }
 .planner-option { display: flex; position: relative; align-items: center; gap: 18px; min-height: 63px; border-bottom: 1px solid #70a9e1; cursor: pointer; padding: 13px 8px; transition: background .2s; }
@@ -117,7 +117,6 @@ a.text-link:hover { color: var(--brand-blue); }
 .site-footer a:hover { color: white; text-decoration: underline; }
 .site-footer ul { display: grid; gap: 10px; }
 .site-footer .footer-contact a { display: flex; align-items: center; gap: 9px; overflow-wrap: anywhere; }
-.footer-address { display: flex; align-items: flex-start; gap: 9px; color: #ced4dc; font-size: 12px; line-height: 1.5; }
 .site-footer .footer-contact svg { flex-shrink: 0; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid #38404a; margin-top: 42px; padding-top: 22px; font-size: 11px; }
 .mobile-contact { display: none; }
@@ -285,12 +284,12 @@ a.text-link:hover { color: var(--brand-blue); }
 .faq-list summary::after { content: "+"; color: var(--brand-blue); font-size: 26px; font-weight: 400; line-height: 1; }
 .faq-list details[open] summary::after { content: "\2212"; }
 .faq-list summary:hover { color: var(--brand-blue); }
+.faq-list details p { max-width: 800px; color: var(--muted); font-size: 15px; line-height: 1.8; padding-bottom: 26px; }
 .service-projects { border-top: 1px solid #e3e6e8; }
 .service-projects .section-heading { align-items: flex-end; }
 .service-projects .section-title { margin-bottom: 0; }
 .service-projects .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 30px; }
 .service-projects .gallery-image { height: 260px; }
-.faq-list details p { max-width: 800px; color: var(--muted); font-size: 15px; line-height: 1.8; padding-bottom: 26px; }
 .related-services { border-top: 1px solid #e3e6e8; padding-top: 44px; padding-bottom: 44px; }
 .related-services h2 { color: #005bb4; margin-bottom: 18px; }
 .related-services ul { display: flex; flex-wrap: wrap; gap: 14px 36px; }
@@ -301,6 +300,7 @@ a.text-link:hover { color: var(--brand-blue); }
 .contact-options p { color: var(--muted); font-size: 14px; margin: 18px 0 24px; }
 .contact-options a { display: block; color: #005bb4; margin-top: 10px; font-size: 14px; overflow-wrap: anywhere; }
 .contact-options address { color: var(--ink); font-size: 14px; line-height: 1.75; font-style: normal; }
+.contact-options a.text-link { display: inline-flex; margin-top: 16px; }
 .gallery-filters { display: flex; flex-wrap: wrap; gap: 10px; }
 .gallery-filters button { border: 1px solid #c4cbd1; padding: 12px 20px; font-size: 13px; border-radius: 3px; cursor: pointer; }
 .gallery-filters button[aria-pressed="true"] { color: white; background: var(--brand-blue); border-color: var(--brand-blue); }

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { site } from './site';
 
 const siteName = site.name;
-const defaultImage = '/images/projects/project-20.jpeg';
+const defaultImage = '/images/og-default.jpg';
 
 type PageMetadataOptions = {
   title: string;
