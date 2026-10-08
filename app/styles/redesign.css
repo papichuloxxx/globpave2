@@ -31,8 +31,21 @@ a.button-white:hover, button.button-white:hover { background: #eaf3ff; color: #0
 .hero-description { font-size: 16px; max-width: 425px; line-height: 1.7; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0; }
 .hero-footnote { border-left: 2px solid var(--brand-blue); padding: 7px 0 7px 20px; font-family: var(--font-manrope), sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .16em; line-height: 1.65; text-transform: uppercase; }
-.hero-photograph { position: relative; min-height: 630px; overflow: hidden; }
-.hero-image { object-fit: cover; object-position: 51% center; }
+.hero-photograph { position: relative; min-height: 630px; overflow: hidden; background: #1a2420; }
+.hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.4s ease-in-out; }
+.hero-slide.is-active { opacity: 1; }
+.hero-image { object-fit: cover; object-position: center; transform-origin: 60% 50%; }
+.hero-slide.is-active .hero-image { animation: hero-zoom 7.5s ease-out forwards; }
+@keyframes hero-zoom { from { transform: scale(1); } to { transform: scale(1.08); } }
+.photo-caption { animation: caption-in .8s ease-out .3s both; }
+@keyframes caption-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.hero-controls { position: absolute; left: 32px; bottom: 32px; display: flex; align-items: center; gap: 4px; padding: 6px 10px 6px 6px; background: rgba(14,24,21,.6); border-radius: 999px; }
+.hero-toggle { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; color: white; }
+.hero-toggle:hover { background: rgba(255,255,255,.15); }
+.hero-dot { position: relative; width: 24px; height: 32px; }
+.hero-dot::after { content: ""; position: absolute; top: 50%; left: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%; background: rgba(255,255,255,.5); transition: background .3s, transform .3s; }
+.hero-dot:hover::after { background: white; }
+.hero-dot[aria-current="true"]::after { background: white; transform: scale(1.35); }
 .photo-caption { position: absolute; bottom: 32px; right: 32px; padding: 20px 24px; background: rgba(14,24,21,.86); color: white; }
 .photo-caption span { display: block; font-size: 9px; letter-spacing: .19em; color: #d9e4dd; margin-bottom: 7px; }
 .photo-caption strong { font-family: var(--font-manrope),sans-serif; font-size: 22px; }
@@ -146,7 +159,6 @@ a.text-link:hover { color: var(--brand-blue); }
   .hero-copy { padding: 38px 26px; }
   .hero-copy h1 { font-size: 5.45vw; }
   .hero-actions .button { padding: 13px 16px; font-size: 12px; }
-  .hero-photograph { min-height: 600px; }
   .section-wrap { padding: 55px 30px; }
   .planning-copy { padding: 45px 30px; }
   .project-planner { padding: 36px 30px; }
@@ -193,8 +205,9 @@ a.text-link:hover { color: var(--brand-blue); }
   .hero-actions { margin: 24px 0; }
   .hero-actions .button { font-size: 13px; min-height: 50px; padding: 13px 20px; }
   .hero-footnote { font-size: 12px; }
-  .hero-photograph { min-height: 330px; }
-  .photo-caption { bottom: 20px; right: 20px; padding: 15px 18px; }
+  .hero-photograph { min-height: 380px; }
+  .photo-caption { bottom: 64px; right: 20px; padding: 15px 18px; }
+  .hero-controls { left: 20px; bottom: 16px; }
   .photo-caption strong { font-size: 20px; }
   .section-wrap { padding: 44px 24px; }
   .section-heading { display: block; }

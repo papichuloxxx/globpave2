@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ArrowUpRight, CheckCircle, Phone } from '@phosphor-icons/react/ssr';
 import ProjectPlanner from './components/ProjectPlanner';
+import HeroSlideshow from './components/HeroSlideshow';
 import { assetPath } from './paths';
 
 const services = [
@@ -23,10 +24,7 @@ export default function Home() {
         <div className="hero-actions"><Link href="#plan-project" className="button button-blue">Plan your project <ArrowRight size={19} aria-hidden /></Link><Link href="/projects" className="button button-outline">View our work</Link></div>
         <p className="hero-footnote">From foundations to a brighter tomorrow.</p>
       </div>
-      <div className="hero-photograph">
-        <Image src={assetPath('/images/projects/project-20.jpeg')} alt="Completed patterned paving winding through a landscaped garden" fill sizes="(max-width: 760px) 100vw, 58vw" preload className="hero-image" />
-        <div className="photo-caption"><span>CRAFTED TO LAST</span><strong>Paving with purpose.</strong><p>Residential & commercial spaces</p></div>
-      </div>
+      <HeroSlideshow />
     </section>
     <section className="home-services section-wrap" aria-labelledby="services-heading">
       <div className="section-heading"><div><p className="eyebrow">OUR SERVICES</p><h2 id="services-heading">Every stage.<br className="mobile-break" /> Thoughtfully built.</h2></div><Link href="/services" className="text-link">Explore all services <ArrowUpRight size={20} aria-hidden /></Link></div>
