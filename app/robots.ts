@@ -1,18 +1,11 @@
 import { MetadataRoute } from 'next';
+import { site } from './site';
 
 export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://www.globpaveconstruction.co.zw';
-
   return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/admin/'],
-      },
-    ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    rules: [{ userAgent: '*', allow: '/' }],
+    sitemap: `${site.url}/sitemap.xml`,
   };
 }

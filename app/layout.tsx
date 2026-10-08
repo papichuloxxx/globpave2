@@ -9,6 +9,7 @@ import MobileContactBar from "./components/MobileContactBar";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
 import SchemaMarkup from "./components/SchemaMarkup";
 import { assetPath } from "./paths";
+import { site } from "./site";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -24,15 +25,13 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteDescription = "Globpave Construction provides civil works, building, paving, plumbing, roofing, electrical, fencing and property maintenance services across Zimbabwe.";
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.globpaveconstruction.co.zw"),
+  metadataBase: new URL(site.url),
   title: {
     default: "Globpave Construction | Construction & Paving in Zimbabwe",
     template: "%s | Globpave Construction",
   },
-  description: siteDescription,
+  description: site.description,
   keywords: ["construction company Zimbabwe", "builders Harare", "paving contractors Harare", "civil construction", "road construction Zimbabwe", "roofing contractors Harare", "plumbers Harare", "renovation contractors Harare", "property maintenance Harare"],
   authors: [{ name: "Globpave Construction" }],
   creator: "Globpave Construction",
@@ -44,8 +43,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Globpave Construction | Construction & Paving in Zimbabwe",
-    description: siteDescription,
-    url: "https://www.globpaveconstruction.co.zw",
+    description: site.description,
+    url: site.url,
     siteName: "Globpave Construction",
     locale: "en_ZW",
     type: "website",
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Globpave Construction | Construction & Paving in Zimbabwe",
-    description: siteDescription,
+    description: site.description,
     images: ["/images/projects/project-20.jpeg"],
   },
   alternates: { canonical: "/" },
@@ -68,11 +67,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    // Add verification codes when available
-    // google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
   },
 };
 

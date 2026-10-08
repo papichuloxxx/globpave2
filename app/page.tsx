@@ -4,11 +4,12 @@ import { ArrowRight, ArrowUpRight, CheckCircle, Phone } from '@phosphor-icons/re
 import ProjectPlanner from './components/ProjectPlanner';
 import HeroSlideshow from './components/HeroSlideshow';
 import { assetPath } from './paths';
+import { primaryPhone } from './site';
 
 const services = [
   { title: 'Civil & infrastructure', text: 'Prepare sites, construct and rehabilitate roads, and manage stormwater with practical drainage systems.', image: '/images/projects/project-14.jpeg', alt: 'Earthmoving equipment preparing a construction site beside a brick building', href: '/services/civil-infrastructure', tag: 'PREPARE THE GROUND' },
   { title: 'Building & construction', text: 'Create new homes, extensions and renovations with brickwork, concrete and plastering brought into one clear scope.', image: '/images/projects/project-12.jpeg', alt: 'Globpave team working on a residential building project', href: '/services/building-construction', tag: 'SHAPE THE STRUCTURE' },
-  { title: 'Paving & external works', text: 'Give driveways, parking areas, perimeter walls and landscapes a considered, hard-wearing finish.', image: '/images/projects/project-11.jpeg', alt: 'Globpave team laying interlocking paving blocks', href: '/services/paving-external-works', tag: 'MAKE AN IMPRESSION' },
+  { title: 'Paving & external works', text: 'Give driveways, parking areas, perimeter walls and landscapes a considered, hard-wearing finish.', image: '/images/projects/project-01.jpeg', alt: 'Finished commercial paving with a channel drain along the edge', href: '/services/paving-external-works', tag: 'MAKE AN IMPRESSION' },
   { title: 'Plumbing & water solutions', text: 'Install, repair and maintain plumbing, borehole connections, septic tanks and soakaway systems.', image: '/images/services/plumbing-water.webp', alt: 'Plumber installing water pipes and fittings in a building under construction', href: '/services/plumbing-water-solutions', tag: 'KEEP WATER MOVING' },
   { title: 'Roofing & interiors', text: 'Protect and finish your building with roofing, ceilings, tiling, painting and waterproofing.', image: '/images/projects/project-13.jpeg', alt: 'Roofed commercial buildings at a completed external works site', href: '/services/roofing-interiors', tag: 'PROTECT AND FINISH' },
   { title: 'Fencing, electrical & maintenance', text: 'Secure, power and care for your property with fencing, electrical installations and general building maintenance.', image: '/images/services/electrical-fencing.webp', alt: 'Electrical contractor working beside a palisade perimeter fence', href: '/services/fencing-electrical-maintenance', tag: 'SECURE AND MAINTAIN' },
@@ -37,7 +38,7 @@ export default function Home() {
     <section className="planning-section" id="plan-project" aria-labelledby="planning-heading">
       <div className="planning-copy"><p className="eyebrow">FROM POSSIBILITY TO A PRACTICAL PLAN</p><h2 id="planning-heading">A clear brief.<br />A considered<br />next step.</h2><p>A new build, an outdoor upgrade or a repair that cannot wait — start with your priorities. We’ll discuss the site, the scope and what needs to happen next.</p>
         <ol className="process-steps"><li><span>01</span><h3>Tell us your plans</h3><p>A few details about your space and what you want to achieve.</p></li><li><span>02</span><h3>Discuss your site</h3><p>We’ll talk through your needs and arrange a visit where needed.</p></li><li><span>03</span><h3>Get a tailored quote</h3><p>A clear scope of work, shaped around your project.</p></li></ol>
-        <a className="text-link" href="tel:+263772900562"><Phone size={19} aria-hidden /> Prefer a conversation? 0772 900 562</a>
+        <a className="text-link" href={'tel:' + primaryPhone.tel}><Phone size={19} aria-hidden /> Prefer a conversation? {primaryPhone.display}</a>
       </div>
       <ProjectPlanner />
     </section>

@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { ArrowRight, ArrowLeft, Phone, Envelope, WhatsappLogo, ClipboardText } from '@phosphor-icons/react';
+import { primaryPhone, site } from '../site';
 
 const projectTypes = ['Build or renovate', 'Pave an outdoor space', 'Repair & maintain', 'Civil works & drainage', 'Roofing & interiors', 'Plumbing & water', 'Electrical & fencing', 'Other / not sure'];
 
@@ -74,7 +75,7 @@ export default function QuoteForm() {
       </form> : <section className="quote-review" aria-labelledby="review-heading">
         <p className="eyebrow">READY FOR THE NEXT STEP</p><h2 ref={reviewHeading} id="review-heading" tabIndex={-1}>Your enquiry is ready.</h2><p>Check your details below, then choose how to send them. You’ll complete the send in WhatsApp or your email app.</p>
         <pre>{message}</pre>
-        <div className="review-actions"><a className="button button-blue" href={'https://wa.me/263772900562?text=' + encodeURIComponent(message)} target="_blank" rel="noopener noreferrer"><WhatsappLogo size={22} aria-hidden />Continue in WhatsApp</a><a className="button button-outline" href={'mailto:info@globpaveconstruction.co.zw?subject=' + encodeURIComponent('Quote enquiry — ' + details.type) + '&body=' + encodeURIComponent(message)}><Envelope size={21} aria-hidden />Open email draft</a></div>
+        <div className="review-actions"><a className="button button-blue" href={site.whatsapp + '?text=' + encodeURIComponent(message)} target="_blank" rel="noopener noreferrer"><WhatsappLogo size={22} aria-hidden />Continue in WhatsApp</a><a className="button button-outline" href={'mailto:' + site.email + '?subject=' + encodeURIComponent('Quote enquiry — ' + details.type) + '&body=' + encodeURIComponent(message)}><Envelope size={21} aria-hidden />Open email draft</a></div>
         <p>Have site photos or plans? Attach them in your message. Your enquiry has not been sent yet.</p>
         <div className="review-actions"><button className="edit-details" type="button" onClick={() => changeStep(false)}><ArrowLeft size={16} className="inline mr-2" aria-hidden />Edit details</button><button className="edit-details" type="button" onClick={async () => {
           try { await navigator.clipboard.writeText(message); setCopyStatus('Enquiry copied. You can paste it into your preferred messaging app.'); }
@@ -83,6 +84,6 @@ export default function QuoteForm() {
         <p role="status">{copyStatus}</p>
       </section>}
     </div>
-    <aside className="quote-aside"><h2>From an idea<br />to a plan.</h2><p>We’ll discuss the scope, materials and site requirements with you before preparing a tailored quotation.</p><p>Not sure which service you need? Choose “Other / not sure” and tell us what you want to achieve.</p><a href="tel:+263772900562"><Phone size={20} aria-hidden />0772 900 562</a><a href="mailto:info@globpaveconstruction.co.zw"><Envelope size={20} aria-hidden />info@globpaveconstruction.co.zw</a></aside>
+    <aside className="quote-aside"><h2>From an idea<br />to a plan.</h2><p>We’ll discuss the scope, materials and site requirements with you before preparing a tailored quotation.</p><p>Not sure which service you need? Choose “Other / not sure” and tell us what you want to achieve.</p><a href={'tel:' + primaryPhone.tel}><Phone size={20} aria-hidden />{primaryPhone.display}</a><a href={'mailto:' + site.email}><Envelope size={20} aria-hidden />{site.email}</a></aside>
   </div>;
 }

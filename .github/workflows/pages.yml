@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Yearly rebuild so the footer copyright year stays current
+  schedule:
+    - cron: "0 1 1 1 *"
 
 permissions:
   contents: read
@@ -35,8 +38,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build static site
-        run: npm run build
+      - name: Lint and build static site
+        run: npm run check
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5

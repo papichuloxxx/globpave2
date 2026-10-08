@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import { site } from './site';
 
-const siteName = 'Globpave Construction';
+const siteName = site.name;
 const defaultImage = '/images/projects/project-20.jpeg';
 
 type PageMetadataOptions = {
