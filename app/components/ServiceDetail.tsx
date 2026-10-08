@@ -5,9 +5,11 @@ import PageIntro from './PageIntro';
 import { assetPath } from '../paths';
 import { primaryPhone } from '../site';
 import { getService, type Service } from '../service-data';
+import { projects } from '../project-data';
 
 export default function ServiceDetail({ service }: { service: Service }) {
   const related = service.related.map(getService);
+  const work = projects.filter(project => project.services.includes(service.slug)).slice(0, 3);
   return <>
     <PageIntro eyebrow={service.eyebrow} title={service.headline} description={service.intro} />
     <section className="editorial-split section-wrap">
@@ -28,6 +30,10 @@ export default function ServiceDetail({ service }: { service: Service }) {
       <p className="eyebrow">WHERE IT APPLIES</p>
       <h2 id="applications-heading" className="section-title">Typical projects.</h2>
       <div className="values-grid">{service.applications.map((item, i) => <article key={item.title}><span>{String(i + 1).padStart(2, '0')}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
+    </section>}
+    {work.length > 0 && <section className="service-projects section-wrap" aria-labelledby="work-heading">
+      <div className="section-heading"><div><p className="eyebrow">FROM OUR PROJECTS</p><h2 id="work-heading" className="section-title">See the work.</h2></div><Link className="text-link" href="/projects">View project gallery <ArrowUpRight size={20} aria-hidden /></Link></div>
+      <div className="gallery-grid">{work.map(project => <Link className="gallery-item" href={'/projects/' + project.id} key={project.id}><div className="gallery-image"><Image src={assetPath('/images/projects/' + project.image)} alt={project.title} fill sizes="(max-width: 760px) 100vw, 33vw" /></div><p>{project.category}</p><div><h3>{project.title}</h3><ArrowUpRight size={20} aria-hidden /></div></Link>)}</div>
     </section>}
     {service.faqs && <section className="faq-section section-wrap" aria-labelledby="faq-heading">
       <p className="eyebrow">COMMON QUESTIONS</p>
